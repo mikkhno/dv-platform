@@ -1,0 +1,481 @@
+/* main */
+h1, h2{
+    margin: 0;
+}
+
+
+body{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+
+header{
+    /* header */
+width: 87.7%;
+max-width: 1263px;
+height: 90px;
+margin: 32px 0 32px 0;
+
+background: #D9D9D9;
+border-radius: 20px;
+
+}
+
+/* blog-title */
+
+.blog-title{
+
+background: url(../image/blog-back.gif);
+border-radius: 40px;
+padding: 30px 25px;
+
+display: flex;
+justify-content: flex-end;
+width: 84.2%;
+max-width: 1213px;
+height: 423px;
+flex-direction: column;
+}
+
+.blog-title h1{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 54px;
+line-height: 64px;
+
+color: #101010;
+
+
+}
+
+.blog-title h2{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+
+color: #101010;
+
+}
+
+/* feed-new */
+
+.feed-new{
+    display: flex;
+    margin-top: 32px;
+    width: 87.7%;
+max-width: 1263px;
+flex-direction: column;
+}
+
+.feed-title{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    /* margin-bottom: 32px; */
+
+}
+
+.feed-title h1{
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 64px;
+    
+    color: #101010;
+}
+
+.feed-new-header h2{
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    margin-top: 8px;
+    
+    color: #101010;
+}
+
+#orange-rect{
+
+width: 10px;
+height: 40px;
+background: #EC713C;
+margin-right: 16px;
+
+}
+
+/* feed-categories */
+
+
+.feed-categories{
+display: flex;
+flex-direction: row;
+margin: 24px 0px;
+gap: 8px;
+
+}
+
+.all{
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    height: 41px;
+    
+    border: 2px solid #EC713C;
+    background-color: #EC713C;
+    color: #fff;
+    
+    border-radius: 40px;
+    
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    }
+
+.category{
+
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+
+/* width: 135px; */
+height: 41px;
+
+border: 2px solid #EC713C;
+border-radius: 40px;
+
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* margin-right: 8px; */
+
+
+    /* text inside */
+    
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #EC713C;
+}
+
+/* feed-articles */
+
+.feed-articles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 87.7%;
+    max-width: 1263px; */
+}
+
+.big-article{
+    display: flex;
+    flex-direction: column;
+}
+
+.ba-pict{
+    background: url(../image/ba-pict.png);
+    width: 776px;
+    height: 489px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.ba-topic{
+width: 121px;
+height: 34px;
+background: #EC713C;
+border-radius: 5px ;
+
+display: flex;
+ align-items: center;
+justify-content: center;
+
+margin: 30px;
+
+
+/* Manrope Bold 2 */
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+
+color: #FFFFFF;
+
+}
+
+#ba-info{
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    gap: 4px;
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+padding: 12px 0 4px 0;
+
+color: #7E7C7C;
+
+
+}
+
+#ba-info p{
+    margin: 0;
+}
+
+/* #ba-info i{
+    width: 18px;
+    height: 18px;
+} */
+
+#ba-title{
+/* Використання Vorgangspassiv в німецькій мові */
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 49px;
+
+color: #000000;
+
+}
+
+#ba-desc{
+
+width: 770px;
+/* height: 95px; */
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
+letter-spacing: 0.0012em;
+margin: 12px 0 0 0;
+
+color: #626262;
+
+
+}
+
+.article-tags{
+    display: flex;
+    margin: 12px 0;
+    gap: 8px;
+    
+}
+
+.read-action{
+text-decoration: none;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+
+color: #EC713C;
+
+
+}
+
+.read-action:hover{
+    color: #000;
+    transition-duration:.3s;
+}
+
+/* small articles */
+
+.small-articles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 384px;
+}
+
+
+.sa-pict{
+    background: url(../image/sa-pict.png);
+    width: 385px;
+    height: 207px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.article-topic{
+/* Rectangle 27 */
+
+width: 92px;
+height: 33px;
+margin: 15px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: #EC713C;
+border-radius: 5px;
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+/* identical to box height */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+}
+
+.a-title{
+
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 33px;
+margin: 4px 0;
+
+color: #000000;
+
+}
+
+.a-desc{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+margin: 8px 0;
+
+color: #626262;
+
+}
+
+/* feed-to-read */
+
+
+/* filters */
+.filter-topic, .filter-level{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+
+
+
+.feed-to-read{
+    display: flex;
+    margin-top: 32px;
+    width: 87.7%;
+    max-width: 1263px;
+    flex-direction: column;
+}
+
+.wall-of-article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-container{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 385px;
+    height: 599px;
+}
+
+.wall-of-article h3{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+
+color: #000000;
+
+
+}
+
+#load-more{
+
+width: 384px;
+height: 68px;
+
+background: #EC713C;
+border-radius: 15px;
+border: none;
+align-self: center;
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 33px;
+
+color: #fff;
+
+}
+
+
+/* footer */
+
+footer{
+
+width: 87.7%;
+max-width: 1262px;
+height: 200px;
+
+
+background: #D9D9D9;
+border-radius: 20px;
+margin: 32px 0;
+
+}
+
+.orange_ico{
+    stroke: #EC713C;
+}
+
+
+/* animations */
+.category:hover{
+    background-color: #EC713C;
+    color: #fff;
+    transition-duration: .3s;
+}
