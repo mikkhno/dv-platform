@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+
+    <link rel="stylesheet" href="css/index.css">
+    <title>Блог</title>
+</head>
+
+<body>
+    <header></header>
+
+    <div class="blog-title">
+        <h2>Наш блог</h2>
+        <h1>Збагачуйте знання граматики<br>
+            та вивчайте німецьку мову в деталях.</h1>
+    </div>
+
+    <div class="feed-new">
+        <div class="feed-new-header">
+            <div class="feed-title">
+                <div id="orange-rect"></div>
+                <h1>Актуальне</h1>
+            </div>
+            <h2>Сортувати за темами:</h2>
+
+            <!-- Rewrite to ul list down here -->
+
+            <div class="feed-categories">
+
+                <div class="all">
+
+                    <p>Усі</p>
+                </div>
+
+                <div class="category" id="pruefung">
+                    <img src="image/ico/dictionary.svg" style="fill: #EC713C;" />
+                    <p>Prüfung</p>
+                </div>
+
+                <div class="category" id="grammatik">
+                    <img src="image/ico/deployed_code.svg" style="fill: #EC713C;" />
+                    <p>Grammatik</p>
+                </div>
+
+                <div class="category" id="lexik">
+                    <img src="image/ico/b.svg" style="fill: #EC713C;" />
+                    <p>Lexik</p>
+                </div>
+
+                <div class="category" id="arbeit">
+                    <img src="image/ico/case.svg" class="orange_ico" />
+                    <p>Arbeit</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="feed-articles">
+            <div class="big-article">
+                <div class="ba-pict">
+                    <div class="ba-topic">
+                        <p>Grammatik</p>
+                    </div>
+                </div>
+                <div id="ba-info">
+                    <img src="image/ico/calendar.svg" style="fill: #EC713C;" />
+                    <p>Квітень 26, 2023</p>
+                    <p>|</p>
+                    <img src="image/ico/pace.svg" style="fill: #EC713C;" />
+                    <p>15 хв. для читання</p>
+                </div>
+                <h2 id="ba-title">Використання Vorganspassiv<br>
+                    в німецькій мові</h2>
+                <p id="ba-desc">Пасивні речення – це речення, де не вказана особа, яка виконує дію. Посуд миється.
+                    Робота робиться. Німецька вчиться. І в німецькій мові такі речення вживаються значно частіше, ніж в
+                    українській. Також ця граматика є обов’язковою від рівня А2...</p>
+                <div class="article-tags">
+
+                    <div class="category" id="pruefung">
+                        <img src="image/ico/flower.svg" style="fill: #EC713C;" />
+                        <p>A2</p>
+                    </div>
+
+                    <div class="category" id="pruefung">
+                        <img src="image/ico/sprinter.svg" style="fill: #EC713C;" />
+                        <p>B1</p>
+                    </div>
+
+                </div>
+                <a href="" class="read-action">Читати-></a>
+
+            </div>
+
+            <div class="small-articles">
+                <div class="first-article">
+                    <div class="sa-pict">
+                        <div class="article-topic">
+                            <p>Prüfung</p>
+                        </div>
+                    </div>
+                    <h2 class="a-title">Фрази для написання листів</h2>
+                    <p class="a-desc">Пишемо листи німецькою для іспиту DTZ. Цей іспит охоплює декілька типів листів:
+                        лист для подачі документів на роботу, щодо оренди квартири..</p>
+                    <a href="" class="read-action">Читати-></a>
+
+                </div>
+
+                <div class="second-article">
+                    <div class="sa-pict">
+                        <div class="article-topic">
+                            <p>Prüfung</p>
+                        </div>
+                    </div>
+                    <h2 class="a-title">Фрази для написання листів</h2>
+                    <p class="a-desc">Пишемо листи німецькою для іспиту DTZ. Цей іспит охоплює декілька типів листів:
+                        лист для подачі документів на роботу, щодо оренди квартири..</p>
+                    <a href="" class="read-action">Читати-></a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="feed-to-read">
+        <div class="feed-title">
+            <div id="orange-rect"></div>
+            <h1>До читання</h1>
+        </div>
+
+        <div class="wall-of-article">
+
+            <div class="flex-container" id="filters">
+                <h2 class="a-title">Фільтри пошуку</h2>
+                <h3>Сортування за темами:</h3>
+                <div class="filter-topic">
+                    <!-- <div class="category" id="pruefung">
+                        <i class="material-icons">book</i>
+                        <p>Prüfung</p>
+                    </div>
+
+                    <div class="category" id="grammatik">
+                        <i class="material-icons">book</i>
+                        <p>Grammatik</p>
+                    </div>
+
+                    <div class="category" id="grammatik">
+                        <i class="material-icons">book</i>
+                        <p>Grammatik</p>
+                    </div>
+
+                    <div class="category" id="pruefung">
+                        <i class="material-icons">book</i>
+                        <p>Prüfung</p>
+                    </div> -->
+
+                    <div class="all">
+                        <p>Усі</p>
+                    </div>
+    
+                    <div class="category" id="pruefung">
+                        <img src="image/ico/dictionary.svg" style="fill: #EC713C;" />
+                        <p>Prüfung</p>
+                    </div>
+    
+                    <div class="category" id="grammatik">
+                        <img src="image/ico/deployed_code.svg" style="fill: #EC713C;" />
+                        <p>Grammatik</p>
+                    </div>
+    
+                    <div class="category" id="lexik">
+                        <img src="image/ico/b.svg" style="fill: #EC713C;" />
+                        <p>Lexik</p>
+                    </div>
+    
+                    <div class="category" id="arbeit">
+                        <img src="image/ico/case.svg" style="fill: #EC713C;" />
+                        <p>Arbeit</p>
+                    </div>
+
+                </div>
+
+                <h3>Сортування за рівнями:</h3>
+                <div class="filter-level">
+                    
+                    <div class="all">
+                        <p>Усі</p>
+                    </div>
+    
+                    <div class="category" id="a1">
+                        <img src="image/ico/flower.svg" style="fill: #EC713C;" />
+                        <p>A1</p>
+                    </div>
+    
+                    <div class="category" id="a2">
+                        <img src="image/ico/flower.svg" style="fill: #EC713C;" />
+                        <p>A2</p>
+                    </div>
+    
+                    <div class="category" id="b1">
+                        <img src="image/ico/sprinter.svg" style="fill: #EC713C;" />
+                        <p>B1</p>
+                    </div>
+    
+                    <div class="category" id="b2">
+                        <img src="image/ico/sprinter.svg" style="fill: #EC713C;" />
+                        <p>B2</p>
+                    </div>
+
+                    <div class="category" id="c1">
+                        <img src="image/ico/flag.svg" style="fill: #EC713C;" />
+                        <p>C1</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex-container" id="first-article">
+                <div class="sa-pict">
+                    <div class="article-topic">
+                        <p>Prüfung</p>
+                    </div>
+                </div>
+                <div id="ba-info">
+                    <img src="image/ico/calendar.svg" style="fill: #EC713C;" />
+                    <p>Квітень 26</p>
+                    <p>|</p>
+                    <img src="image/ico/pace.svg" style="fill: #EC713C;" />
+                    <p>15 хв.</p>
+                </div>
+                <h2 class="a-title">Фрази для написання листів</h2>
+                <p class="a-desc">Пишемо листи німецькою для іспиту DTZ. Цей іспит охоплює декілька типів листів: лист
+                    для подачі документів на роботу, щодо оренди квартири чи якісь нюанси по квартирі, отримання
+                    інформації, лист - вибачення, вирішення робочих питань...</p>
+                <div class="article-tags">
+
+                    <div class="category" id="pruefung">
+                        <img src="image/ico/flower.svg" style="fill: #EC713C;" />
+                        <p>A2</p>
+                    </div>
+
+                    <div class="category" id="pruefung">
+                        <img src="image/ico/sprinter.svg" style="fill: #EC713C;" />
+                        <p>B1</p>
+                    </div>
+
+                </div>
+                <a href="" class="read-action">Читати-></a>
+
+            </div>
+
+            <div class="flex-container" id="second-article">
+                <div class="sa-pict">
+                    <div class="article-topic">
+                        <p>Prüfung</p>
+                    </div>
+                </div>
+                <div id="ba-info">
+                    <img src="image/ico/calendar.svg" style="fill: #EC713C;" />
+                    <p>Квітень 26</p>
+                    <p>|</p>
+                    <img src="image/ico/pace.svg" style="fill: #EC713C;" />
+                    <p>15 хв.</p>
+                </div>
+                <h2 class="a-title">Фрази для написання листів</h2>
+                <p class="a-desc">Пишемо листи німецькою для іспиту DTZ. Цей іспит охоплює декілька типів листів: лист
+                    для подачі документів на роботу, щодо оренди квартири чи якісь нюанси по квартирі, отримання
+                    інформації, лист - вибачення, вирішення робочих питань...</p>
+                <div class="article-tags">
+
+                    <div class="category" id="pruefung">
+                        <img src="image/ico/flower.svg" style="fill: #EC713C;" />
+                        <p>A2</p>
+                    </div>
+
+                    <div class="category" id="pruefung">
+                        <img src="image/ico/sprinter.svg" style="fill: #EC713C;" />
+                        <p>B1</p>
+                    </div>
+
+                </div>
+                <a href="" class="read-action">Читати-></a>
+
+            </div>
+
+            <div class="flex-container" id="third-article">
+                <div class="sa-pict">
+                    <div class="article-topic">
+                        <p>Prüfung</p>
+                    </div>
+                </div>
+                <div id="ba-info">
+                    <img src="image/ico/calendar.svg" style="fill: #EC713C;" />
+                    <p>Квітень 26</p>
+                    <p>|</p>
+                    <img src="image/ico/pace.svg" style="fill: #EC713C;" />
+                    <p>15 хв.</p>
+                </div>
+                <h2 class="a-title">Фрази для написання листів</h2>
+                <p class="a-desc">Пишемо листи німецькою для іспиту DTZ. Цей іспит охоплює декілька типів листів: лист
+                    для подачі документів на роботу, щодо оренди квартири чи якісь нюанси по квартирі, отримання
+                    інформації, лист - вибачення, вирішення робочих питань...</p>
+                <div class="article-tags">
+
+                    <div class="category" id="pruefung">
+                        <img src="image/ico/flower.svg" style="fill: #EC713C;" />
+                        <p>A2</p>
+                    </div>
+
+                    <div class="category" id="pruefung">
+                        <img src="image/ico/sprinter.svg" style="fill: #EC713C;" />
+                        <p>B1</p>
+                    </div>
+
+                </div>
+                <a href="" class="read-action">Читати-></a>
+
+            </div>
+
+            <div class="flex-container" id="fourth-article">
+                <div class="sa-pict">
+                    <div class="article-topic">
+                        <p>Prüfung</p>
+                    </div>
+                </div>
+                <div id="ba-info">
+                    <img src="image/ico/calendar.svg" style="fill: #EC713C;" />
+                    <p>Квітень 26</p>
+                    <p>|</p>
+                    <img src="image/ico/pace.svg" style="fill: #EC713C;" />
+                    <p>15 хв.</p>
+                </div>
+                <h2 class="a-title">Фрази для написання листів</h2>
+                <p class="a-desc">Пишемо листи німецькою для іспиту DTZ. Цей іспит охоплює декілька типів листів: лист
+                    для подачі документів на роботу, щодо оренди квартири чи якісь нюанси по квартирі, отримання
+                    інформації, лист - вибачення, вирішення робочих питань...</p>
+                <div class="article-tags">
+
+                    <div class="category" id="pruefung">
+                        <img src="image/ico/flower.svg" style="fill: #EC713C;" />
+                        <p>A2</p>
+                    </div>
+
+                    <div class="category" id="pruefung">
+                        <img src="image/ico/sprinter.svg" style="fill: #EC713C;" />
+                        <p>B1</p>
+                    </div>
+
+                </div>
+                <a href="" class="read-action">Читати-></a>
+
+            </div>
+
+            <div class="flex-container" id="fifth-article">
+                <div class="sa-pict">
+                    <div class="article-topic">
+                        <p>Prüfung</p>
+                    </div>
+                </div>
+                <div id="ba-info">
+                    <img src="image/ico/calendar.svg" style="fill: #EC713C;" />
+                    <p>Квітень 26</p>
+                    <p>|</p>
+                    <img src="image/ico/pace.svg" style="fill: #EC713C;" />
+                    <p>15 хв.</p>
+                </div>
+                <h2 class="a-title">Фрази для написання листів</h2>
+                <p class="a-desc">Пишемо листи німецькою для іспиту DTZ. Цей іспит охоплює декілька типів листів: лист
+                    для подачі документів на роботу, щодо оренди квартири чи якісь нюанси по квартирі, отримання
+                    інформації, лист - вибачення, вирішення робочих питань...</p>
+                <div class="article-tags">
+
+                    <div class="category" id="pruefung">
+                        <img src="image/ico/flower.svg" style="fill: #EC713C;" />
+                        <p>A2</p>
+                    </div>
+
+                    <div class="category" id="pruefung">
+                        <img src="image/ico/sprinter.svg" style="fill: #EC713C;" />
+                        <p>B1</p>
+                    </div>
+
+                </div>
+                <a href="" class="read-action">Читати-></a>
+
+            </div>
+        </div>
+
+        <button id="load-more">Дивитися далі</button>
+
+    </div>
+
+    <footer></footer>
+</body>
+
+</html>
