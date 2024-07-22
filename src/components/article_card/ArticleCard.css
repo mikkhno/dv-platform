@@ -1,0 +1,78 @@
+.flex-container{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 385px;
+    height: 599px;
+}
+
+.sa-pict{
+    /*background: url(../../image/sa-pict.png);*/
+    width: 385px;
+    height: 207px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.article-topic{
+
+height: 33px;
+margin: 15px;
+padding: 0 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: #EC713C;
+border-radius: 5px;
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+
+color: #FFFFFF;
+}
+
+
+
+.article-tags{
+    display: flex;
+    margin: 12px 0;
+    gap: 8px;
+
+}
+
+.read-action{
+text-decoration: none;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+
+color: #EC713C;
+
+
+}
+
+
+#ba-title{
+/* Використання Vorgangspassiv в німецькій мові */
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 49px;
+
+color: #000000;
+
+}
+
+/*.category:hover{*/
+/*    background-color: #EC713C;*/
+/*    color: #fff;*/
+/*    transition-duration: .3s;*/
+/*}*/

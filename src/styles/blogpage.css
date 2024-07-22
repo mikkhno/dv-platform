@@ -1,0 +1,558 @@
+:root {
+    --gap: 52px;
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+
+/* BLOG TITLE */
+.blog-title {
+    background: url(../image/blog-back.gif);
+    border-radius: 40px;
+    padding: 30px 25px;
+
+    display: flex;
+    justify-content: flex-end;
+    width: 84.2%;
+    max-width: 1213px;
+    height: 350px;
+    flex-direction: column;
+}
+
+.blog-title h1 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 64px;
+    color: #101010;
+}
+
+.blog-title h2 {
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #101010;
+}
+
+.feed-new {
+    display: flex;
+    margin-top: 32px;
+    width: 87.7%;
+    max-width: 1263px;
+    flex-direction: column;
+}
+
+.feed-title {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.feed-title h1 {
+
+    font-family: 'Manrope';
+    font-style: normal;
+    /*font-weight: 400;*/
+    font-size: 54px;
+    line-height: 64px;
+
+    color: #101010;
+}
+
+.feed-new-header h2 {
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    margin-top: 8px;
+
+    color: #101010;
+}
+
+#orange-rect {
+
+    width: 10px;
+    height: 40px;
+    background: #EC713C;
+    margin-right: 16px;
+
+}
+
+.feed-categories {
+    display: flex;
+    flex-direction: row;
+    margin: 24px 0px;
+    gap: 8px;
+
+}
+
+.all {
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    height: 41px;
+
+    border: 2px solid #EC713C;
+    background-color: #EC713C;
+    color: #fff;
+
+    border-radius: 40px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.feed-articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.big-article {
+    display: flex;
+    flex-direction: column;
+}
+
+.ba-pict {
+    background: url(../image/ba-pict.png);
+    width: 776px;
+    height: 489px;
+    border-radius: 20px;
+    display: flex;
+    background-size: cover;
+}
+
+.ba-topic {
+    width: 121px;
+    height: 34px;
+    background: #EC713C;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 30px;
+
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+
+    color: #FFFFFF;
+
+}
+
+#ba-info {
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    gap: 4px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 12px 0 4px 0;
+
+    color: #7E7C7C;
+
+
+}
+
+#ba-info p {
+    margin: 0;
+}
+
+#ba-title {
+    /* Використання Vorgangspassiv в німецькій мові */
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+
+    color: #000000;
+
+}
+
+#ba-desc {
+    width: 770px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.0012em;
+    margin: 12px 0 0 0;
+    color: #626262;
+}
+
+.article-tags {
+    display: flex;
+    margin: 12px 0;
+    gap: 8px;
+
+}
+
+.read-action {
+    text-decoration: none;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #EC713C;
+}
+
+.read-action:hover {
+    color: #000;
+    transition-duration: .3s;
+}
+
+.small-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
+    grid-gap: 32px;
+}
+
+.small-articles .first-article, .small-articles .second-article {
+    width: 384px;
+}
+
+
+.sa-pict {
+    background: url(../image/sa-pict.png);
+    background-size: cover;
+    width: 100%;
+    height: 207px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.article-topic {
+    height: 33px;
+    margin: 15px;
+    padding: 0 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #EC713C;
+    border-radius: 5px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.a-title {
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    margin: 4px 0;
+
+    color: #000000;
+
+}
+
+.a-desc {
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    margin: 8px 0;
+
+    color: #626262;
+
+}
+
+.a-desc p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    hyphens: auto;
+}
+
+.filter-topic, .filter-level {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.feed-to-read {
+    display: flex;
+    margin-top: 54px;
+    width: 87.7%;
+    max-width: 1263px;
+    flex-direction: column;
+
+}
+
+.wall-of-article {
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: flex-start;*/
+    /*margin: 24px 0;*/
+    /*gap: 52px;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(385px, 1fr));
+    grid-gap: var(--gap);
+    margin: 24px 0;
+}
+
+.flex-container {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 385px;
+    height: 599px;
+}
+
+.wall-of-article h3 {
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+
+    color: #000000;
+
+}
+
+#load-more {
+
+    width: 384px;
+    height: 68px;
+
+    background: #EC713C;
+    border-radius: 15px;
+    border: none;
+    align-self: center;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 33px;
+
+    color: #fff;
+
+}
+
+.orange_ico {
+    stroke: #EC713C;
+}
+
+#no-articles {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    margin: 4px 0;
+    color: #000000;
+}
+
+
+/* Мобільні пристрої */
+@media (max-width: 429px) {
+    /* CSS правила для екранів до 480px шириною */
+}
+
+/* Великі смартфони та маленькі планшети */
+@media (max-width: 576px) {
+    :root {
+        --gap: 24px;
+    }
+
+    .feed-new, .feed-to-read {
+        width: 92.5%;
+    }
+
+    .blog-title {
+        width: 89.7%;
+        height: 450px;
+        border-radius: unset;
+    }
+
+    .blog-title h1 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .big-article .ba-pict, .big-article #ba-desc {
+        width: 100%;
+    }
+
+    .small-articles {
+        flex-direction: column;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .feed-articles {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .flex-container {
+        height: unset;
+    }
+
+}
+
+/* Планшети (портретний режим) та маленькі ноутбуки */
+@media (min-width: 577px) and (max-width: 768px) {
+
+    :root {
+        --gap: 32px;
+    }
+
+    .blog-title {
+        width: 87.9%;
+    }
+
+    .blog-title h1, .feed-title h1 {
+        font-size: 40px;
+
+    }
+
+    .blog-title h1 {
+        line-height: 50px;
+    }
+
+    .big-article .ba-pict, .big-article #ba-desc {
+        width: 100%;
+    }
+
+    .feed-new, .feed-to-read {
+        width: 92.2%;
+    }
+
+    .small-articles {
+        flex-direction: row;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .small-articles .first-article, .small-articles .second-article {
+        width: 344px;
+    }
+
+    .feed-articles {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+
+    .flex-container {
+        flex-basis: 100%;
+        height: unset;
+    }
+
+}
+
+/* Середні та великі ноутбуки */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    :root {
+        --gap: 40px;
+    }
+
+    .blog-title {
+        width: 89.7%;
+    }
+
+    .feed-new, .feed-to-read {
+        width: 94%;
+    }
+
+    .flex-container {
+        flex-basis: 472px;
+        height: unset;
+    }
+
+    .feed-articles {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .big-article .ba-pict, .big-article #ba-desc {
+        width: 100%;
+    }
+
+    .small-articles {
+        flex-direction: row;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .wall-of-article {
+        justify-content: space-between;
+    }
+
+    .small-articles .first-article, .small-articles .second-article {
+        width: 473px;
+    }
+}
+
+/* Великі екрани та десктопи */
+@media (min-width: 993px) and (max-width: 1356px) {
+    .feed-articles {
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    .small-articles {
+        flex-direction: row;
+    }
+
+    .ba-pict {
+        width: 100%;
+    }
+
+    .small-articles .first-article, .small-articles .second-article {
+        width: unset;
+    }
+}
+
