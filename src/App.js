@@ -14,14 +14,14 @@ function App() {
       <div className="App">
           <Router>
               <Routes>
-                  <Route path="/blog" element={<BlogPage />}></Route>
-                  <Route path="/blog-loc" element={<BlogPageLocalised />}></Route>
-                  <Route path="/article" element={<Article />}></Route>
-                  <Route path="/page" element={<Page />}></Route>
+                  <Route path="/blog" element={<BlogPage/>}></Route>
+                  <Route path="/blog-loc" element={<BlogPageLocalised/>}></Route>
+                  <Route path="/article" element={<Article/>}></Route>
+                  <Route path="/page" element={<Page/>}></Route>
               </Routes>
           </Router>
       </div>
-  );
+);
 }
 
 export default App;

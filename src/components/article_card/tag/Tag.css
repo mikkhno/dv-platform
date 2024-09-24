@@ -17,5 +17,16 @@
     font-size: 18px;
     line-height: 25px;
     color: #EC713C;
+
+    cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+.category.active {
+  background-color: #EC713C; /* Синій фон для активного елемента */
+  color: white; /* Білий текст для активного елемента */
+}
+
+.category:hover {
+  background-color: #EC713C; /* Темніший відтінок при наведенні */
+}

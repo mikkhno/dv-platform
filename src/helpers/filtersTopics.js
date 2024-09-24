@@ -20,7 +20,11 @@ const filtersTopics = [
         {id:4,
     title: 'Arbeit',
         icon:caseIcon,
-    }
+    },
+
+    {id:5,
+    title: 'Andere',
+    icon: caseIcon}
 
 ]
 

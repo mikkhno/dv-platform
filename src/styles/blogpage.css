@@ -11,21 +11,34 @@
 
 h1, h2 {
     margin: 0;
+hyphens: auto;
+}
+
+p{
+/*hyphens: auto;*/
+    word-break: break-all;
 }
 
 
 /* BLOG TITLE */
 .blog-title {
-    background: url(../image/blog-back.gif);
-    border-radius: 40px;
-    padding: 30px 25px;
+    background: url(../image/blog-backgr.jpg);
+    /*padding: 30px 25px;*/
 
     display: flex;
-    justify-content: flex-end;
-    width: 84.2%;
-    max-width: 1213px;
-    height: 350px;
+    justify-content: space-between;
+    width: 100%;
+    height: 520px;
     flex-direction: column;
+
+}
+
+.blog-title .text{
+    /*margin: 0 0 32px 90px;*/
+    width: 87.7%;
+    max-width: 1263px;
+    align-self: center;
+    margin-bottom: 32px;
 }
 
 .blog-title h1 {
@@ -34,7 +47,7 @@ h1, h2 {
     font-weight: 700;
     font-size: 54px;
     line-height: 64px;
-    color: #101010;
+    color: #fff;
 }
 
 .blog-title h2 {
@@ -44,7 +57,7 @@ h1, h2 {
     font-weight: 400;
     font-size: 24px;
     line-height: 33px;
-    color: #101010;
+    color: #fff;
 }
 
 .feed-new {
@@ -145,24 +158,39 @@ h1, h2 {
 }
 
 .ba-topic {
-    width: 121px;
-    height: 34px;
-    background: #EC713C;
-    border-radius: 5px;
+    /*width: 121px;*/
+    /*height: 34px;*/
+    /*background: #EC713C;*/
+    /*border-radius: 5px;*/
 
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+
+    /*margin: 30px;*/
+
+
+    /*font-family: 'Manrope';*/
+    /*font-style: normal;*/
+    /*font-weight: 700;*/
+    /*font-size: 18px;*/
+    /*line-height: 25px;*/
+
+    /*color: #FFFFFF;*/
+    height: 33px;
+    margin: 30px;
+    padding: 0 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin: 30px;
-
-
+    background: #EC713C;
+    border-radius: 5px;
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
-
+    text-align: center;
     color: #FFFFFF;
 
 }
@@ -344,7 +372,7 @@ h1, h2 {
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 385px;
-    height: 599px;
+    /*height: 599px;*/
 }
 
 .wall-of-article h3 {
@@ -410,9 +438,8 @@ h1, h2 {
     }
 
     .blog-title {
-        width: 89.7%;
-        height: 450px;
-        border-radius: unset;
+        width: 100%;
+        height: 520px;
     }
 
     .blog-title h1 {
@@ -448,9 +475,6 @@ h1, h2 {
         --gap: 32px;
     }
 
-    .blog-title {
-        width: 87.9%;
-    }
 
     .blog-title h1, .feed-title h1 {
         font-size: 40px;
@@ -499,9 +523,6 @@ h1, h2 {
         --gap: 40px;
     }
 
-    .blog-title {
-        width: 89.7%;
-    }
 
     .feed-new, .feed-to-read {
         width: 94%;

@@ -5,7 +5,6 @@ header {
     height: 90px;
     margin: 32px 0 32px 0;
 
-    background: #D9D9D9;
     border-radius: 20px;
 
 }
@@ -129,6 +128,7 @@ header {
     padding: 0;
     margin-bottom: 54px;
     gap: 16px;
+    align-items: baseline;
 
 }
 
@@ -166,6 +166,7 @@ header {
     line-height: 32px;
 
     color: #000000;
+    margin-bottom: 10px;
 
 
 }
@@ -256,7 +257,7 @@ tbody tr
     max-width: 1263px;
 }
 
-.social-media {
+.share .social-media {
     display: flex;
     gap: 8px;
     width: 87.7%;
@@ -327,17 +328,6 @@ tbody tr
 
 }
 
-footer {
-
-    width: 87.7%;
-    max-width: 1262px;
-    height: 200px;
-
-    background: #D9D9D9;
-    border-radius: 20px;
-    margin: 32px 0;
-
-}
 
 #orange-line{
     background-color: rgba(255, 127, 0, 0.5); /* Orange color with 50% opacity */
