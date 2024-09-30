@@ -18,6 +18,15 @@ border-radius: 20px;
     header{
         width: 92.2%;
     }
+
+    .left-part{
+        .Nav{
+            visibility: hidden;
+        }
+    }
+    #login{
+        visibility: hidden;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px){

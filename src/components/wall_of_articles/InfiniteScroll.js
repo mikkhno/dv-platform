@@ -144,8 +144,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import ArticleCard from '../../components/article_card/ArticleCard.js'; // Імпорт компонента ArticleCard
 // import '../styles/blogpage.css';
 
-import {get} from "axios";
-
 // Функція для видалення всіх атрибутів style та очищення тексту + укорочення(опціонально)
 const cleanHtmlContent = (htmlContent) => {
   const tempDiv = document.createElement('div');

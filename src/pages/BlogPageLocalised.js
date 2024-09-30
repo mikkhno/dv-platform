@@ -14,6 +14,7 @@ import translationsUa from "../locals/ua/blogpage";
 import translationsEn from "../locals/en/blogpage";
 import translationsDe from "../locals/de/blogpage";
 import Feed from "../components/feed/Feed";
+import ThemeToggle from "../components/dark-mode-toogle/dark-toogle";
 
 i18n
     .use(initReactI18next)
@@ -63,6 +64,9 @@ const BlogPage = () => {
                 <option value="en">EN</option>
                 <option value="de">DE</option>
             </select>
+
+            <ThemeToggle />
+
             <div className="feed-new-header">
                 <div className="feed-title">
                     <div id="orange-rect"></div>
