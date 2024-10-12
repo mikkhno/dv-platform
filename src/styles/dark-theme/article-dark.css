@@ -1,0 +1,8 @@
+body.dark-mode{
+    background: #212121;
+transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.dark-mode.article-name h1{
+    color: #f5f5f5;
+}

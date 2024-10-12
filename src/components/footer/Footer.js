@@ -12,9 +12,9 @@ const Footer = ()=>
             <p>Deutsch Vektor 2024<br/>
                 © Усі права захищені</p>
             <div className="social-media">
-            <img src={telegramIcon}/>
-            <img src={youtubeIcon}/>
-            <img src={instagramIcon}/>
+                <a href="https://t.me/deutschvektor1"><img src={telegramIcon}/></a>
+                <a href="https://www.facebook.com/DeutschVektor/"><img src={youtubeIcon}/></a>
+                <a href="https://www.instagram.com/deutsch.vektor/"><img src={instagramIcon}/></a>
                 </div>
             </div>
 
@@ -38,3 +38,4 @@ const Footer = ()=>
 }
 
 export default Footer;
+

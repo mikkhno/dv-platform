@@ -1,10 +1,44 @@
+// import React, { useState } from 'react';
+// import './../styles/test/testarticle.css'; // Файл зі стилями для компонента
+//
+// const Article = () => {
+//   // Стан, що визначає наявність підписки
+//   const [hasSubscription, setHasSubscription] = useState(false);
+//
+//   return (
+//     <div className="article-container">
+//       {/* Текст статті */}
+//       <div className={`article-content ${!hasSubscription ? 'blurred' : ''}`}>
+//         <h1>Заголовок статті</h1>
+//         <p>
+//           Це текст вашої статті. Коли користувач не має підписки, він буде
+//           перекритий блоком з пропозицією оформити підписку.
+//         </p>
+//         <p>Додатковий контент статті...</p>
+//       </div>
+//
+//       {/* Блок перекриття, якщо немає підписки */}
+//       {!hasSubscription && (
+//         <div className="overlay">
+//           <div className="overlay-content">
+//             <h2>Оформіть підписку для повного доступу</h2>
+//             <button onClick={() => setHasSubscription(true)}>Оформити підписку</button>
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+//
+// export default Article;
+
 import React, {useEffect, useState} from 'react';
+import './../styles/test/testarticle.css';
 import deployed_codeIcon from "../image/ico/deployed_code.svg";
 import './../styles/article.css'
 import xIcon from './../image/ico/X_logo.svg'
 import facebookIcon from './../image/ico/facebook_logo.svg'
 import {ArticleContent, ArticleData, ArticleExercises, ArticleSuggested} from "../helpers/ArticleFile";
-import { useParams } from 'react-router-dom';
 import Tag from "../components/article_card/tag/Tag";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
@@ -31,10 +65,8 @@ const renderContentWithAdds = (text, adds) => {
 
 const Article = () => {
     const [activeSection, setActiveSection] = useState('');
+    const [hasSubscription, setHasSubscription] = useState(false);
 
-  const { id } = useParams();
-
-  const articleId = parseInt(id);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -88,55 +120,73 @@ const Article = () => {
             </div>
 
             <div className="article-image"></div>
-            <div className="content-and-menu">
-                <div className="left-side">
-                    <div className="article-content">
-                        {ArticleContent.map((section, index) => (
-                            <div key={section.id} className="section" id={`${section.id}-sect`}>
-                                {/* Виведення заголовкa кожного розділу */}
-                                <h2>{section.title}</h2>
+            <div className={`article-content ${!hasSubscription ? 'blurred' : ''}`}>
+                <div className="content-and-menu">
 
-                                {/* Виведення основного тексту з додатковими елементами після абзаців */}
-                                {renderContentWithAdds(section.text, section.adds)}
 
-                                {/* Виведення додаткових елементів в кінці секції (якщо є) */}
-                                {section.adds
-                                    .filter(add => add.position === 'end')
-                                    .map((add, index) => (
-                                        <div key={index} dangerouslySetInnerHTML={{__html: add.content}}/>
-                                    ))}
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                    <div className="left-side">
 
-                <div className="right-side">
-                    <div className="right-side-blocks">
-                        <div className="agenda">
-                            <ul>
-                                {ArticleContent.map((section, index) => (
-                                    <li key={section.id}
-                                        className={activeSection === `${section.id}-sect` ? 'active' : ''}>
-                                        <a>{section.title}</a>
-                                        {/*<a href={`#${section.id}-sect`}>{section.title}</a>*/}
-                                    </li>
-                                ))}
-                                <DarkToogle/>
-                            </ul>
-                        </div>
-                        <h2>Вправи до теми</h2>
-                        <div className="topic-exercises">
-                            {ArticleExercises.map(exercise => (
-                                <a key={exercise.id} href={exercise.link}>
-                                    <div id={`exercises-${exercise.id}`}>
-                                        <h3>{exercise.title}</h3>
-                                    </div>
-                                </a>
+                        <div className="article-content">
+
+                            {ArticleContent.map((section, index) => (
+                                <div key={section.id} className="section" id={`${section.id}-sect`}>
+                                    {/* Виведення заголовкa кожного розділу */}
+                                    <h2>{section.title}</h2>
+
+                                    {/* Виведення основного тексту з додатковими елементами після абзаців */}
+                                    {renderContentWithAdds(section.text, section.adds)}
+
+                                    {/* Виведення додаткових елементів в кінці секції (якщо є) */}
+                                    {section.adds
+                                        .filter(add => add.position === 'end')
+                                        .map((add, index) => (
+                                            <div key={index} dangerouslySetInnerHTML={{__html: add.content}}/>
+                                        ))}
+                                </div>
                             ))}
+
+                        </div>
+                    </div>
+
+
+                    <div className="right-side">
+                        <div className="right-side-blocks">
+                            <div className="agenda">
+                                <ul>
+                                    {ArticleContent.map((section, index) => (
+                                        <li key={section.id}
+                                            className={activeSection === `${section.id}-sect` ? 'active' : ''}>
+                                            <a>{section.title}</a>
+                                            {/*<a href={`#${section.id}-sect`}>{section.title}</a>*/}
+                                        </li>
+                                    ))}
+                                    <DarkToogle/>
+                                </ul>
+                            </div>
+                            <h2>Вправи до теми</h2>
+                            <div className="topic-exercises">
+                                {ArticleExercises.map(exercise => (
+                                    <a key={exercise.id} href={exercise.link}>
+                                        <div id={`exercises-${exercise.id}`}>
+                                            <h3>{exercise.title}</h3>
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            {/* Блок перекриття, якщо немає підписки */}
+            {!hasSubscription && (
+                <div className="overlay">
+                    <div className="overlay-content">
+                        <h2>Оформіть підписку для повного доступу</h2>
+                        <button onClick={() => setHasSubscription(true)}>Оформити підписку</button>
+                    </div>
+                </div>
+            )}
 
             <div className="share">
                 <h2>Поділіться цією статтею з друзями!</h2>

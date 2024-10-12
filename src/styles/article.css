@@ -4,9 +4,7 @@ header {
     max-width: 1263px;
     height: 90px;
     margin: 32px 0 32px 0;
-
     border-radius: 20px;
-
 }
 
 .App {
@@ -16,44 +14,33 @@ header {
     align-items: center;
 }
 
-
 /* article name */
 .article-name {
     display: flex;
     flex-direction: column;
     width: 87.7%;
     max-width: 1263px;
-
 }
 
 .article-name h1 {
-
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 700;
     font-size: 54px;
     line-height: 74px;
     margin: 0;
-
     color: #000000;
-
 }
 
 .article-name h3 {
-
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 33px;
     margin: 12px 0 0 0;
-
     color: #7E7C7C;
-
-
 }
-
-
 
 .tags {
     display: flex;
@@ -64,12 +51,11 @@ header {
 .article-image {
     background: url(../image/ba-pict.png);
     background-size: cover;
+    background-position: center;
     width: 87.7%;
     max-width: 1263px;
     height: 525px;
-
     border-radius: 15px;
-
 }
 
 /* content and menu */
@@ -77,47 +63,47 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 54px;
-
+    margin-top: 34px;
     width: 87.7%;
     max-width: 1263px;
 }
 
 .left-side {
     width: 872px;
+    padding-top: 20px;
 }
 
-.article-content h2 {
 
+
+.article-content h2 {
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
     line-height: 49px;
     margin: 0;
-
     color: #000000;
-
 }
 
-.article-content{
+.agenda ul li.active a {
+    color: black; /* Задайте колір для активного пункту меню */
+    font-weight: bold; /* Можна також зробити текст жирним */
+    transition: ease-in 0.1s;
+}
+
+.article-content {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
 .article-content p {
-
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 156%;
-
     color: #000000;
-
-
-
 }
 
 /* right menu */
@@ -127,26 +113,20 @@ header {
     list-style: none;
     padding: 0;
     margin-bottom: 54px;
+    margin-top: 0;
     gap: 16px;
     align-items: baseline;
-
 }
 
 .agenda li a {
     text-decoration: none;
     /* Вступ */
-
     font-family: 'Manrope';
     font-style: normal;
     /* font-weight: 500; */
     font-size: 24px;
     line-height: 33px;
-
     color: #D9D9D9;
-
-
-
-
 }
 
 .agenda li #intro {
@@ -154,21 +134,21 @@ header {
     color: #000000;
 }
 
-.right-side {}
+.right-side-blocks {
+    position: sticky; /* Залишити елемент на місці */
+    top: 0; /* Фіксувати на верху */
+    z-index: 100;
+    padding-top: 20px; /* Зробити його над іншими елементами */
+}
 
 .right-side h2 {
-
-
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
-
     color: #000000;
     margin-bottom: 10px;
-
-
 }
 
 .topic-exercises {
@@ -179,21 +159,16 @@ header {
 }
 
 .topic-exercises div {
-
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 150px;
+    width: 180px;
     height: 40px;
-
-
     background: #EC713C;
     border-radius: 7.5px;
-
 }
 
 .topic-exercises a {
-
     text-decoration: none;
     font-family: 'Manrope';
     font-style: normal;
@@ -201,27 +176,26 @@ header {
     font-size: 18px;
     line-height: 22px;
     /* identical to box height */
-
     color: #000000;
-
 }
 
 table {
-  border-collapse: collapse;
+    border-collapse: collapse;
     width: -webkit-fill-available;
     border-radius: 3px;
 }
+
 table td, table th {
-  border: 0.75px solid black;
+    border: 0.75px solid black;
     padding: 7.5px 9px;
 
 }
 
-.sentence-examples span, table span{
+.sentence-examples span, table span {
     color: #7E7C7C;
 }
 
-.sentence-examples {
+.article-content ul {
     list-style: decimal;
     font-family: 'Manrope';
     font-style: normal;
@@ -231,7 +205,7 @@ table td, table th {
     color: #000000;
 }
 
-thead tr{
+thead tr {
     background-color: #EC713C;
     color: #000;
     text-align: left;
@@ -240,11 +214,9 @@ thead tr{
     font-weight: 400;
     font-size: 15px;
     line-height: 28px;
-
 }
 
-tbody tr
- {
+tbody tr {
     border: 1px solid #000;
     font-family: 'Manrope';
     font-style: normal;
@@ -255,6 +227,7 @@ tbody tr
 .share {
     width: 87.7%;
     max-width: 1263px;
+    margin-top: 24px;
 }
 
 .share .social-media {
@@ -263,19 +236,15 @@ tbody tr
     width: 87.7%;
     max-width: 1263px;
     margin: 12px 0;
-
 }
 
 .share h2 {
-
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
-
     color: #000000;
-
 }
 
 .share-button img {
@@ -287,17 +256,14 @@ tbody tr
     max-width: 1263px;
 }
 
-.relevant-articles h2 {
-    margin: 24px 0 8px 0;
-
+.relevant-articles #title {
+    margin: 24px 0;
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
     line-height: 26px;
     color: #000000;
-
-
 }
 
 .rel-art-list {
@@ -308,28 +274,59 @@ tbody tr
 
 
 .ra-pict {
-
     width: 358px;
     height: 120px;
     background: url(../image/sa-pict.png);
+    background-size: cover;
+    background-position: center;
     border-radius: 15px;
 
 }
 
 .rel-art h2 {
-
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
-
     color: #000000;
-
+    margin-top: 8px;
 }
 
+.rel-art a{
+    text-decoration: none;
+}
 
-#orange-line{
+#orange-line {
     background-color: rgba(255, 127, 0, 0.5); /* Orange color with 50% opacity */
     mix-blend-mode: multiply;
+}
+
+@media (min-width:425px) and (max-width: 768px){
+
+    .content-and-menu{
+        flex-direction: column;
+    }
+
+    .left-side{
+        width: 100%;
+    }
+
+.right-side .agenda{
+    content-visibility: hidden;
+}
+
+    .right-side .topic-exercises{
+        flex-direction: row ;
+    }
+
+    .rel-art-list{
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .rel-art .ra-pict{
+        width: 100%;
+        height: 140px;
+    }
 }
