@@ -1,0 +1,353 @@
+:root{
+    --first: #0B2545;
+    --second:#DCE9F9;
+}
+
+
+.App{
+    /*background: var(--second);*/
+  background: #FFF;
+}
+
+.word-variants {
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  /*gap: 10px;*/
+   display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два елементи на рядок */
+    gap: 10px;
+   padding-right: 16px;
+}
+
+.variant.correct {
+  background-color: var(--first);
+  color: var(--second);/* зелений для правильного */
+}
+
+.variant.incorrect {
+  background-color: #f8d7da; /* червоний для неправильного */
+}
+
+.word-card {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.pict-word {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--second); /* Затемнення */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--first);
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+  transition: opacity 0.5s ease-in-out; /* Плавне зникнення */
+    opacity: 1;
+}
+
+.overlay.hidden {
+    opacity: 0;
+    pointer-events: none; /* Щоб елемент не блокував взаємодію */
+}
+
+
+.question-mark {
+    user-select: none; /* Щоб не можна було виділяти */
+}
+
+/*.pict-word{*/
+/*    width: 60.5%;*/
+/*max-width: 670px;*/
+/*height: 430px;*/
+/*border-radius: 10px;*/
+/*    object-fit: cover;*/
+/*}*/
+
+
+.variant {
+  display: flex;
+  justify-content: center;
+
+  width: 200px;
+  padding: 12px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: var(--second);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.variant p{
+  margin: 0;
+}
+
+.variant.correct {
+  background-color: #d4edda; /* зелений для правильної відповіді */
+  border-color: #c3e6cb;
+}
+
+.variant.incorrect {
+  background-color: #f8d7da; /* червоний для неправильної відповіді */
+}
+
+.variant.animate-correct {
+  animation: correctAnswer 0.5s ease-in-out;
+}
+
+.variant.animate-incorrect {
+  animation: wrongAnswer 0.5s ease-in-out;
+}
+
+@keyframes correctAnswer {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes wrongAnswer {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.clear-btn {
+box-sizing: border-box;
+
+width: 155px;
+height: 39px;
+
+border: 2px solid var(--first);
+border-radius: 10px;
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+
+background: #fff;
+color: #0B2545;
+  transition: background-color 0.3s;
+}
+
+.clear-btn:hover {
+  background-color: var(--first);
+  color: var(--second);
+}
+
+.revealed-card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.word-picture{
+  display: flex;
+    width: 87.7%;
+    border-radius: 5px;
+        /*overflow: hidden;*/
+}
+
+.word-example{
+  width: 100%;
+}
+
+@media screen and (max-width: 869px){
+
+  .card-learning{
+    padding: 8.8% 0;
+    /*transform: translate(0%, 6%);*/
+  }
+
+  /* Верхушка */
+
+  .mode-exercise{
+    display: none;
+  }
+
+  .word-picture{
+    flex-direction: column-reverse;
+      align-items: center;
+  }
+
+  .word-count{
+    font-size: 36px;
+  }
+
+  .topic-name{
+    font-size: 18px;
+    padding-top: 4px;
+  }
+
+  /* progress bar */
+
+  .progress-bar{
+        margin: 16px 0;
+  }
+
+  .progress-bar div{
+    height: 8px;
+  }
+
+
+  .word-count-topic{
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .pict-word{
+    width: 100%;
+    /*height: 52.2%;*/
+  }
+
+.word-translation-cards{
+  padding: 16px 0;
+}
+
+  .word-translation-cards h2{
+    font-size: 32px;
+  }
+
+  .word-translation-cards h4{
+     font-size: 14px;
+  }
+
+  .word-translation-cards h3{
+     font-size: 24px;
+    line-height: normal;
+  }
+
+  .message-bubble{
+    /*width: 100%;*/
+    margin:0 0 0 8px;
+    padding: 12px;
+  }
+
+  .message-text h2{
+font-size: 16px;
+line-height: 19px;
+  }
+
+  .nav-buttons{
+    width: 100%;
+    display: flex;
+
+    justify-content: space-evenly;
+  }
+
+  .word-variants{
+    width: 100%;
+    grid-template-columns: unset;
+  }
+
+  .variant{
+    width: 100%;
+  }
+
+  .word{
+      padding: 16px 0;
+      width: 100%;
+  }
+
+  .article-drag{
+      padding: 16px 0;
+  }
+}
+
+.audio-input{
+
+width: 300px;
+height: 40px;
+
+border: 2px solid #0B2545;
+border-radius: 10px;
+padding-left:   16px ;
+
+
+/* Manrope Regular 2 */
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+
+color: #0B2545;
+
+
+
+}
+
+#audio-part{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+        margin: 0 16px 16px 0;
+}
+
+#audio-part h1, #audio-part h2{
+    color: var(--first);
+}
+
+@media screen and (max-width: 425px) {
+    div#audio-part div{
+        flex-direction: column;
+    }
+
+    .audio-input{
+        width: 93%;
+    }
+
+    div#audio-part{
+        width: 100%;
+    }
+
+    div#audio-part button{
+        width: 100%;
+        height: 50px;
+        margin:  4px 0;
+    }
+
+}

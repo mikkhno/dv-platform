@@ -1,0 +1,524 @@
+const WordTopicInfo = [
+  {
+    "themeTitle": "Pannen im Alltag",
+    "wordsQuantity": 26,
+    "subLevel": "B1.1",
+    "moduleTitle": "Wellness",
+    "imagePath": "/image/svg-file.svg",
+    "wordWithArticlesQuantity": 15,
+    "CardsProgress": 13,
+    "WordProgress": 12,
+    "TranslateProgress": 19,
+    "ListeningProgress": 3,
+    "ArticlesProgress": 15
+  }
+];
+
+const exerciseEntityList = [
+    { id: 1, title: "Картки", description: "", link: "/elearning/wordcards/1", icon: "style", wordCountKey: "wordsQuantity" },
+    { id: 2, title: "Слово", description: "", link: "/elearning/new/1", icon: "book_3", wordCountKey: "wordsQuantity" },
+    { id: 3, title: "На слух", description: "", link: "/elearning/listening/1", icon: "record_voice_over", wordCountKey: "wordsQuantity" },
+    { id: 4, title: "Переклад", description: "", link: "/elearning/wordtranslate/1", icon: "translate", wordCountKey: "wordsQuantity"},
+    { id: 5, title: "Артиклі", description: "", link: "/elearning/article/1", icon: "crossword", wordCountKey: "wordWithArticlesQuantity" }
+];
+
+const jsonExerciseProgress = [
+  {
+    "exerciseMessage": "Доступно слов - #",
+    "exerciseId": 1,
+    "exerciseProgress": 0
+  },
+  {
+    "exerciseMessage": "Пройдено # из # слов",
+    "exerciseId": 2,
+    "exerciseProgress": 3
+  },
+  {
+    "exerciseMessage": "Пройдено # из # слов",
+    "exerciseId": 3,
+    "exerciseProgress": 19
+  },
+  {
+    "exerciseMessage": "Пройдено # из # слов",
+    "exerciseId": 4,
+    "exerciseProgress": 3
+  }
+  ,
+  {
+    "exerciseMessage": "Пройдено # из # слов",
+    "exerciseId": 5,
+    "exerciseProgress": 15
+  }
+];
+
+const wordEntityList = [
+  {
+         "translation_ua":"ім'я прізвище",
+         "type_of_word":"Nomen",
+         "audioWithArticle":"/sounds/word.ogg",
+         "plural_form":"Namen",
+         "image_path":"/images/word/name.jpg",
+         "translation":"ім'я прізвище",
+         "word_context":"Mein Name ist Otto Krüger.",
+         "audio":"/sounds/word.ogg",
+         "id":19,
+         "word":"Name",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"der"
+      },
+      {
+         "translation_ua":"ім'я",
+         "type_of_word":"Nomen",
+         "audioWithArticle":"/images/word_audio/21_a.mp3",
+         "plural_form":"Vornamen",
+         "image_path":"/images/word/vorname.jpg",
+         "translation":"ім'я",
+         "word_context":"Sein Vorname ist Holger",
+         "audio":"/images/word_audio/21.mp3",
+         "id":21,
+         "word":"Vorname",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"der"
+      },
+      {
+         "translation_ua":"прізвище",
+         "type_of_word":"Nomen",
+         "audioWithArticle":"/images/word_audio/22_a.mp3",
+         "plural_form":"Familiennamen",
+         "image_path":"/images/word/familienname.jpg",
+         "translation":"прізвище",
+         "word_context":"Unser Familienname ist Meier.",
+         "audio":"/images/word_audio/22.mp3",
+         "id":22,
+         "word":"Familienname",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"der"
+      },
+      {
+         "translation_ua":"рік народження",
+         "type_of_word":"Nomen",
+         "audioWithArticle":"/images/word_audio/23_a.mp3",
+         "plural_form":"Geburtsjahre",
+         "image_path":"/images/word/geburtsjahr.jpg",
+         "translation":"рік народження",
+         "word_context":"Mein Geburtsjahr ist 1986.",
+         "audio":"/images/word_audio/23.mp3",
+         "id":23,
+         "word":"Geburtsjahr",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"das"
+      },
+      {
+         "translation_ua":"день народження",
+         "type_of_word":"Nomen",
+         "audioWithArticle":"/images/word_audio/24_a.mp3",
+         "plural_form":"Geburtstage",
+         "image_path":"/images/word/geburtstag.jpg",
+         "translation":"день народження",
+         "word_context":"Wann hast du Geburtstag?",
+         "audio":"/images/word_audio/24.mp3",
+         "id":24,
+         "word":"Geburtstag",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"der"
+      },
+      {
+         "translation_ua":"вік",
+         "type_of_word":"Nomen",
+         "audioWithArticle":"/images/word_audio/25_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/alter.jpg",
+         "translation":"вік",
+         "word_context":"",
+         "audio":"/images/word_audio/25.mp3",
+         "id":25,
+         "word":"Alter",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"das"
+      },
+      {
+         "translation_ua":"сімейний стан",
+         "type_of_word":"Nomen",
+         "audioWithArticle":"/images/word_audio/26_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/familienstand.jpg",
+         "translation":"сімейний стан",
+         "word_context":"",
+         "audio":"/images/word_audio/26.mp3",
+         "id":26,
+         "word":"Familienstand",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"der"
+      },
+      {
+         "translation_ua":"професія",
+         "type_of_word":"",
+         "audioWithArticle":"/images/word_audio/27_a.mp3",
+         "plural_form":"Berufe",
+         "image_path":"/images/word/beruf.jpg",
+         "translation":"професія",
+         "word_context":"Was sind Sie von Beruf?",
+         "audio":"/images/word_audio/27.mp3",
+         "id":27,
+         "word":"Beruf",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"der"
+      },
+      {
+         "translation_ua":"місце народження",
+         "type_of_word":"Nomen",
+         "audioWithArticle":"/images/word_audio/28_a.mp3",
+         "plural_form":"Geburtsorte",
+         "image_path":"/images/word/geburtsort.jpg",
+         "translation":"місце народження",
+         "word_context":"Nennen Sie bitte Ihren Geburtsort!",
+         "audio":"/images/word_audio/28.mp3",
+         "id":28,
+         "word":"Geburtsort",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"der"
+      },
+      {
+         "translation_ua":"пане",
+         "type_of_word":"Nomen",
+         "audioWithArticle":"/images/word_audio/29_a.mp3",
+         "plural_form":"Herren",
+         "image_path":"/images/word/herr.jpg",
+         "translation":"пане",
+         "word_context":"Sehr geehrte Damen und Herren!",
+         "audio":"/images/word_audio/29.mp3",
+         "id":29,
+         "word":"Herr",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"der"
+      },
+      {
+         "translation_ua":"1. жінка; 2. пані; 3. дружина",
+         "type_of_word":"Nomen",
+         "audioWithArticle":"/images/word_audio/30_a.mp3",
+         "plural_form":"Frauen",
+         "image_path":"/images/word/frau.jpg",
+         "translation":"1. жінка; 2. пані; 3. дружина",
+         "word_context":"Das ist meine Frau.",
+         "audio":"/images/word_audio/30.mp3",
+         "id":30,
+         "word":"Frau",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"die"
+      },
+      {
+         "translation_ua":"дитина",
+         "type_of_word":"",
+         "audioWithArticle":"/images/word_audio/31_a.mp3",
+         "plural_form":"Kinder",
+         "image_path":"/images/word/kind.jpg",
+         "translation":"дитина",
+         "word_context":"Er hat schon 2 Kinder.",
+         "audio":"/images/word_audio/31.mp3",
+         "id":31,
+         "word":"Kind",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"das"
+      },
+      {
+         "translation_ua":"1. приходити; 2. бути родом",
+         "type_of_word":"Verb",
+         "audioWithArticle":"/images/word_audio/32_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/kommen.jpg",
+         "translation":"1. приходити; 2. бути родом",
+         "word_context":"Ich komme aus der Ukraine.",
+         "audio":"/images/word_audio/32.mp3",
+         "id":32,
+         "word":"kommen",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":""
+      },
+      {
+         "translation_ua":"звати",
+         "type_of_word":"Verb",
+         "audioWithArticle":"/images/word_audio/33_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/no-image.jpg",
+         "translation":"звати",
+         "word_context":"Heißt du Otto?",
+         "audio":"/images/word_audio/33.mp3",
+         "id":33,
+         "word":"heißen",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":""
+      },
+      {
+         "translation_ua":"жити",
+         "type_of_word":"Verb",
+         "audioWithArticle":"/images/word_audio/34_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/wohnen.jpg",
+         "translation":"жити",
+         "word_context":"Ich wohne jetzt in Kiel.",
+         "audio":"/images/word_audio/34.mp3",
+         "id":34,
+         "word":"wohnen",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":""
+      },
+      {
+         "translation_ua":"бути",
+         "type_of_word":"Verb",
+         "audioWithArticle":"/images/word_audio/35_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/sein.jpg",
+         "translation":"бути",
+         "word_context":"ich bin; du bist; er, sie, es ist",
+         "audio":"/images/word_audio/35.mp3",
+         "id":35,
+         "word":"sein",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":""
+      },
+      {
+         "translation_ua":"народжений",
+         "type_of_word":"Adj.",
+         "audioWithArticle":"/images/word_audio/36_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/geboren.jpg",
+         "translation":"народжений",
+         "word_context":"Ich bin im Jahre 1986 geboren.",
+         "audio":"/images/word_audio/36.mp3",
+         "id":36,
+         "word":"geboren",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":""
+      },
+      {
+         "translation_ua":"жіночий",
+         "type_of_word":"Adj.",
+         "audioWithArticle":"/images/word_audio/37_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/weiblich.jpg",
+         "translation":"жіночий",
+         "word_context":"",
+         "audio":"/images/word_audio/37.mp3",
+         "id":37,
+         "word":"weiblich",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":""
+      },
+      {
+         "translation_ua":"чоловічий",
+         "type_of_word":"",
+         "audioWithArticle":"/images/word_audio/38_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/no-image.jpg",
+         "translation":"чоловічий",
+         "word_context":"",
+         "audio":"/images/word_audio/38.mp3",
+         "id":38,
+         "word":"männlich",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":""
+      },
+      {
+         "translation_ua":"як?",
+         "type_of_word":"",
+         "audioWithArticle":"/images/word_audio/39_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/no-image.jpg",
+         "translation":"як?",
+         "word_context":"Wie heißen Sie?",
+         "audio":"/images/word_audio/39.mp3",
+         "id":39,
+         "word":"wie?",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":""
+      },
+      {
+         "translation_ua":"що?",
+         "type_of_word":"",
+         "audioWithArticle":"/images/word_audio/40_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/no-image.jpg",
+         "translation":"що?",
+         "word_context":"Was machen Sie gern?",
+         "audio":"/images/word_audio/40.mp3",
+         "id":40,
+         "word":"was?",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":""
+      },
+      {
+         "translation_ua":"звідки?",
+         "type_of_word":"",
+         "audioWithArticle":"/images/word_audio/41_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/no-image.jpg",
+         "translation":"звідки?",
+         "word_context":"Woher kommst du?",
+         "audio":"/images/word_audio/41.mp3",
+         "id":41,
+         "word":"woher?",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":""
+      },
+      {
+         "translation_ua":"де?",
+         "type_of_word":"",
+         "audioWithArticle":"/images/word_audio/42_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/no-image.jpg",
+         "translation":"де?",
+         "word_context":"Wo wohnst du?",
+         "audio":"/images/word_audio/42.mp3",
+         "id":42,
+         "word":"wo?",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":""
+      },
+      {
+         "translation_ua":"хто?",
+         "type_of_word":"",
+         "audioWithArticle":"/images/word_audio/43_a.mp3",
+         "plural_form":"",
+         "image_path":"/images/word/no-image.jpg",
+         "translation":"хто?",
+         "word_context":"Wer ist das?",
+         "audio":"/images/word_audio/43.mp3",
+         "id":43,
+         "word":"wer?",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":""
+      },
+      {
+         "translation_ua":"країна",
+         "type_of_word":"Nomen",
+         "audioWithArticle":"/images/word_audio/44_a.mp3",
+         "plural_form":"Länder",
+         "image_path":"/images/word/land.jpg",
+         "translation":"країна",
+         "word_context":"In welchem Land wohnst du?",
+         "audio":"/images/word_audio/44.mp3",
+         "id":44,
+         "word":"Land",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"das"
+      },
+      {
+         "translation_ua":"Місто",
+         "type_of_word":"Nomen",
+         "audioWithArticle":"/images/word_audio/45_a.mp3",
+         "plural_form":"Städte",
+         "image_path":"/images/word/stadt.jpg",
+         "translation":"Місто",
+         "word_context":"In welcher Stadt wohnst du?",
+         "audio":"/images/word_audio/45.mp3",
+         "id":45,
+         "word":"Stadt",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"die"
+      },
+      {
+         "translation_ua":"село, село",
+         "type_of_word":"Nomen",
+         "audioWithArticle":"/images/word_audio/46_a.mp3",
+         "plural_form":"Dörfer",
+         "image_path":"/images/word/dorf.jpg",
+         "translation":"село, село",
+         "word_context":"Wohnst du im Dorf oder in der Stadt?",
+         "audio":"/images/word_audio/46.mp3",
+         "id":46,
+         "word":"Dorf",
+         "wordListEntity":{
+            "id":3,
+            "title":"Personen"
+         },
+         "article":"das"
+      }
+];
+
+const otherInfo = [
+  {
+    "video": "W1SVI57GCKA",
+    "subLevel": "Уровень A1.1",
+    "typeEntityId": 1
+  }
+];
+
+export { WordTopicInfo, exerciseEntityList, jsonExerciseProgress, wordEntityList, otherInfo };

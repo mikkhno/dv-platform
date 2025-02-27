@@ -1,0 +1,650 @@
+.page-content{
+    display: flex;
+    flex-direction: row;
+    margin: 32px 0;
+    gap: 24px;
+}
+
+.block-exercises{
+        display: flex;
+    flex-direction: row;
+}
+
+.topic-block{
+            display: flex;
+    flex-direction: row;
+}
+
+.table-words {
+    overflow-y: auto;
+    /*height: 287px;*/
+    /*width: 600px;*/
+}
+
+.next-topic-pict{
+    width: 120px;
+    height: 120px;
+}
+
+
+/* width */
+.table-words::-webkit-scrollbar {
+  width: 12px;
+
+}
+
+/* Track */
+.table-words::-webkit-scrollbar-track {
+  background: rgba(40, 68, 179, 0.25);
+        border-radius: 10px;
+}
+
+    /* Handle */
+.table-words::-webkit-scrollbar-thumb {
+    background: var(--first);;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.table-words::-webkit-scrollbar-thumb:hover {
+  background: var(--first);
+}
+
+/* test */
+.words-import {
+    border: 1px solid var(--first);
+    margin-right: 12px;
+    border-collapse: separate;
+    border-radius: 6px;
+}
+
+.words-import th {
+    border: 1px solid var(--first);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.words-import td {
+    border: none;
+}
+
+.word-bold {
+    font-weight: 700;
+}
+
+.words-import tr{
+    background-color: #fff ;
+}
+
+.words-import tbody tr:nth-of-type(even) {
+    background-color: rgba(40, 68, 179, 0.25);
+}
+
+.sound-span {
+    width: 16px;
+}
+
+.words-import tbody {
+    color: #101010;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+th:first-of-type {
+    border-top-left-radius: 10px;
+}
+
+th:last-of-type {
+    border-top-right-radius: 10px;
+}
+
+tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 10px;
+}
+
+tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 10px;
+}
+
+
+/* Контейнер для тексту з tooltip */
+.tooltip-container {
+  position: relative; /* Для позиціонування спливаючого повідомлення */
+  display: inline-block; /* Щоб контейнер займав лише потрібне місце */
+  cursor: pointer; /* Зміна курсора при наведенні */
+}
+
+/* Спливаюче повідомлення (приховане за замовчуванням) */
+.tooltip {
+  visibility: hidden; /* Робить елемент невидимим */
+  background-color: #101010; /* Фон повідомлення */
+  color: #fff; /* Колір тексту */
+  text-align: center;
+  padding: 8px 12px; /* Відступи всередині */
+  border-radius: 6px; /* Заокруглення кутів */
+  position: absolute; /* Для розміщення над текстом */
+  z-index: 10; /* Щоб tooltip був поверх інших елементів */
+  bottom: 125%; /* Розташування вище контейнера */
+  left: 50%; /* Центрування по горизонталі */
+  transform: translateX(-50%); /* Корекція для центрування */
+  opacity: 0; /* Прозорість для плавної анімації */
+
+  transition: opacity 0.3s ease; /* Плавна поява */
+    transition-delay: 0.7s;
+
+    font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+}
+
+.word-exercise {
+
+}
+
+.block-exercises>div:hover {
+    transform: scale(1.05);
+    /*box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);*/
+}
+
+/* Трикутник під tooltip */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* Розташування нижче повідомлення */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #101010 transparent transparent transparent; /* Трикутник */
+}
+
+/* Відображення tooltip при наведенні */
+.tooltip-container:hover .tooltip {
+  visibility: visible; /* Робить елемент видимим */
+  opacity: 1; /* Прибирає прозорість */
+}
+
+.topic-block{
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+    width: 591px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 24px;
+    margin: 16px 0;
+}
+
+.topic-level{
+    width: 90px;
+    height: 45px;
+    background: #0b2545;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.level-topic{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+
+color: #fff;
+}
+
+.word-count{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+
+color: #0B2545;
+}
+
+.topic-title{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 54px;
+line-height: 54px;
+
+color: #0B2545;
+
+
+}
+
+.topic-pic{
+width: 258.34px;
+height: 182.4px;
+    align-self: center;
+}
+
+.block-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.block-exercises{
+    /*width: 622px;*/
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:24px;
+}
+
+.block-exercises .card-exercise,
+.block-exercises .articles-exercise,
+.block-exercises .translation-exercise,
+.block-exercises .listen-exercise,
+.block-exercises .word-exercise, .exercise-item{
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+display: flex;
+flex-direction: column;
+    justify-content: space-between;
+align-items: center;
+padding: 16px;
+gap: 4px;
+
+background: #fff;
+border-radius: 10px;
+
+box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+.block-exercises h2{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 19px;
+letter-spacing: 0.01em;
+
+color: #0B2545;
+}
+
+.page-route{
+
+height: 19px;
+
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 19px;
+
+color: rgba(0, 0, 0, 0.43);
+    /*margin-bottom: 8px;*/
+    margin-left: 4px;
+
+}
+
+.next-topics-t, .vocab h2{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+    margin-bottom: 16px;
+
+color: #000000;
+}
+
+.next-topics{
+    display: flex;
+    /*width: 622px;*/
+    justify-content: space-between;
+    gap: 16px;
+    /*flex-wrap: wrap;*/
+}
+
+/*.next-topics div{*/
+
+/*width: 300px;*/
+/*height: 70px;*/
+/*background: #0B2545;*/
+/*    border-radius: 10px;*/
+
+
+/*}*/
+
+.exercise-ico-title{
+    display: flex;
+    margin-bottom: 4px;
+    align-items: center;
+    gap: 4px;
+}
+
+.mode-progress{
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-segment{
+width: 30%;
+height: 4px;
+background: #D9D9D9;
+border-radius: 3px;
+
+}
+
+.completed{
+    background: #0B2545;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1356px) {
+
+    .vocab{
+        height: auto !important;
+    }
+
+    .words-import{
+        margin-right: unset;
+    }
+
+    .page-content{
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .table-words{
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .vektor-tip{
+        display: none !important;
+    }
+
+}
+
+
+@media (max-width: 767px){
+     .vocab{
+        height: auto !important;
+    }
+
+    .words-import{
+        margin-right: unset;
+    }
+
+    .page-content{
+        flex-direction: column;
+        gap: 24px;
+        width: 83.2%;
+    max-width: 639px;
+    }
+
+    .table-words{
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .topic-block{
+        width: unset;
+    }
+
+    .block-exercises {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 10px; /* Відстань між елементами */
+        height: unset;
+}
+
+    .block-exercises > :nth-last-child(1):nth-child(odd) {
+    grid-column: span 2; /* Останній елемент займає 2 колонки, якщо їх непарна кількість */
+}
+
+    .mode-progress{
+        display: none;
+    }
+
+    .mobile-mode-progress{
+        display: flex !important;
+    }
+
+    .tooltip-container{
+        display: contents;
+    }
+
+    .exercise-item{
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .vektor-tip{
+        display: none !important;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .page-content{
+        width: 91.7%;
+    }
+
+    .next-topic-pict{
+        display: none;
+    }
+
+    .next-topic-text{
+        align-items: center;
+    }
+
+    .progress-button{
+        margin: 0 !important;
+    }
+
+    .topic-1 {
+        padding: 8px 4px !important;
+        flex-direction: column-reverse;
+        height: unset !important;
+        gap: 8px;
+    }
+
+    .topic-block{
+        height: unset;
+        flex-direction: column-reverse;
+    }
+
+    .word-count{
+        font-size: 24px;
+    }
+
+    .topic-title{
+        font-size: 36px;
+    }
+
+    .block-info{
+        gap: 8px;
+    }
+}
+.mobile-mode-progress{
+display: none;
+justify-content: center;
+align-items: center;
+
+width: 40px;
+height: 24px;
+
+background: #0B2545;
+border-radius: 5px;
+    padding: 4px;
+}
+
+.mobile-mode-progress h2{
+    font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 19px;
+letter-spacing: 0.01em;
+color: #F5F5F5;
+}
+
+.full{
+    background: var(--first) !important;
+}
+
+.full :is(h2, span, p, div, .tooltip, .exercise-ico-title, .articles-progress) {
+    color: #FFFFFF !important;
+}
+
+/*.material-symbols-outlined {*/
+/*    font-variation-settings:*/
+/*        'FILL' 1,*/
+/*        'wght' 400,*/
+/*        'GRAD' 0,*/
+/*        'opsz' 24;*/
+/*}*/
+
+.show-more-btn{
+
+width: 100%;
+height: 48px;
+
+background: var(--first);
+border-radius: 10px;
+    border: none;
+
+    margin: 12px 0;
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+
+color: #F5F5F5;
+
+}
+
+.vocab{
+    display: flex;
+    flex-direction: column;
+    height: 644px;
+}
+
+.vektor-tip{
+    display: flex;
+    background: var(--second);
+    width: 623px;
+    height: 186px;
+    border-radius: 10px;
+    margin-top: 24px;
+    align-items: center;
+    gap: 24px;
+    padding-right: 16px;
+}
+
+.vektor-tip h2{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+
+color: var(--first);
+
+
+}
+
+.vektor-tip p{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+
+color: var(--first);
+
+
+}
+
+.vektor-tip img{
+    width: 187px;
+    height: 182px;
+}
+
+
+.topic-1{
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+    width: 283px;
+    padding: 8px 24px 8px 4px;
+height: 54px;
+background: #CFDEFF;
+    border-radius: 10px;
+    display: flex;
+    /*flex-direction: column;*/
+align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.topic-1 h3{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 14px;
+
+color: #CFDEFF;
+
+
+}
+
+.topic-1 h2{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+color: #2E59B7;
+}
+
+.next-topic-text{
+    display: flex;
+   flex-direction: column;
+    justify-content: space-between;
+}
+
+.progress-button{
+    margin-left: 12px;
+}
+
+
+.level-container{
+    display: flex;
+    height: 20px;
+    width: 46px;
+    align-items: center;
+    justify-content: center;
+    background: #2E59B7;
+    border-radius: 5px;
+}
+
+.title-modus{
+    display: flex;
+    flex-direction: column;
+}
