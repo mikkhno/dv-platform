@@ -49,9 +49,9 @@ header {
 }
 
 .article-image {
-    background: url(../image/ba-pict.png);
-    background-size: cover;
-    background-position: center;
+    /*background: url(../image/ba-pict.png);*/
+background-size: cover;
+background-position: center;
     width: 87.7%;
     max-width: 1263px;
     height: 525px;

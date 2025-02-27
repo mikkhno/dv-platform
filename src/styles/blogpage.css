@@ -284,6 +284,8 @@ p{
 
 .category:hover {
   background-color: #EC713C; /* Темніший відтінок при наведенні */
+    .material-symbols-outlined, p{color: #FFFFFF};
+
 }
 
 .read-action {

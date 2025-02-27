@@ -10,53 +10,56 @@ import defaultImage from "../../image/articles/telc_b2_brief.jpg";
 const Feed = () => {
   return(
       <>
-        <div className="big-article">
-          <div className="ba-pict" style={{ backgroundSize: "cover", backgroundImage: `url(${actualArticles.image ? actualArticles.image : defaultImage})`}}>
-            <div className="ba-topic">
-              <p>{actualArticles[0].category}</p>
-            </div>
-          </div>
-          <div id="ba-info">
-            <img src={calender}/>
-            <p>{actualArticles[0].date}</p>
-            <p>|</p>
-            <img src={timer}/>
-            <p>{actualArticles[0].readTime} хв. для читання</p>
-          </div>
-          <h2 id="ba-title">{actualArticles[0].title}</h2>
-          <p id="ba-desc" dangerouslySetInnerHTML={{ __html: actualArticles[0].description }} />
-          <div className="article-tags">
-          {actualArticles[0].tags.map((tag, index) => (
-              <Tag key={index} tags={tag} /> ))}
-          </div>
-          <a href="/article" className="read-action">Читати &#8594;</a>
-
-        </div>
-
-        <div className="small-articles">
-          <div className="first-article">
-            <div className="sa-pict">
-              <div className="article-topic">
-                <p>{actualArticles[1].category}</p>
+          <div className="big-article">
+              <div className="ba-pict" style={{
+                  backgroundSize: "cover",
+                  backgroundImage: `url(${actualArticles.image ? actualArticles.image : defaultImage})`
+              }}>
+                  <div className="ba-topic">
+                      <p>{actualArticles[0].category}</p>
+                  </div>
               </div>
-            </div>
-            <h2 className="a-title">{actualArticles[1].title}</h2>
-            <p className="a-desc" dangerouslySetInnerHTML={{ __html: actualArticles[1].description }} />
-            <a href="" className="read-action">Читати &#8594;</a>
+              <div id="ba-info">
+                  <img src={calender}/>
+                  <p>{actualArticles[0].date}</p>
+                  <p>|</p>
+                  <img src={timer}/>
+                  <p>{actualArticles[0].readTime} хв. для читання</p>
+              </div>
+              <h2 id="ba-title">{actualArticles[0].title}</h2>
+              <p id="ba-desc" dangerouslySetInnerHTML={{__html: actualArticles[0].description}}/>
+              <div className="article-tags">
+                  {actualArticles[0].tags.map((tag, index) => (
+                      <Tag key={index} tags={tag}/>))}
+              </div>
+              <a href="/article" className="read-action">Читати &#8594;</a>
 
           </div>
 
-          <div className="second-article">
-             <div className="sa-pict">
-              <div className="article-topic">
-                <p>{actualArticles[2].category}</p>
+          <div className="small-articles">
+              <div className="first-article">
+                  <div className="sa-pict">
+                      <div className="article-topic">
+                          <p>{actualArticles[1].category}</p>
+                      </div>
+                  </div>
+                  <h2 className="a-title">{actualArticles[1].title}</h2>
+                  <p className="a-desc" dangerouslySetInnerHTML={{__html: actualArticles[1].description}}/>
+                  <a href="" className="read-action">Читати &#8594;</a>
+
               </div>
-            </div>
-            <h2 className="a-title">{actualArticles[2].title}</h2>
-            <p className="a-desc" dangerouslySetInnerHTML={{ __html: actualArticles[2].description }} />
-            <a href="" className="read-action">Читати &#8594;</a>
-        </div>
-        </div>
+
+              <div className="second-article">
+                  <div className="sa-pict">
+                      <div className="article-topic">
+                          <p>{actualArticles[2].category}</p>
+                      </div>
+                  </div>
+                  <h2 className="a-title">{actualArticles[2].title}</h2>
+                  <p className="a-desc" dangerouslySetInnerHTML={{__html: actualArticles[2].description}}/>
+                  <a href="" className="read-action">Читати &#8594;</a>
+              </div>
+          </div>
       </>
   )
 }

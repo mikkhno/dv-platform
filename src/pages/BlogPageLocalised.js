@@ -49,76 +49,78 @@ const BlogPage = () => {
 
 
     return (<Suspense fallback="Loading...">
+            <style>{`{.material-symbols-outlined{color: #0B2545} `}</style>
 
-        <div className="blog-title">
-            <Header/>
-            <div className="text">
-                <h2>{t('ourBlog')}</h2>
-                <h1><Trans components={{br: <br/>}}>{t('pageTitle')}</Trans></h1>
+            <div className="blog-title">
+                <Header/>
+                <div className="text">
+                    <h2>{t('ourBlog')}</h2>
+                    <h1><Trans components={{br: <br/>}}>{t('pageTitle')}</Trans></h1>
+                </div>
             </div>
-        </div>
 
-        <div className="feed-new">
-            <select name="language" onChange={onChange}>
-                <option value="ua">UA</option>
-                <option value="en">EN</option>
-                <option value="de">DE</option>
-            </select>
+            <div className="feed-new">
+                <select name="language" onChange={onChange}>
+                    <option value="ua">UA</option>
+                    <option value="en">EN</option>
+                    <option value="de">DE</option>
+                </select>
 
-            <ThemeToggle />
+                <ThemeToggle/>
 
-            <div className="feed-new-header">
+
+                <div className="feed-new-header">
+                    <div className="feed-title">
+                        <div id="orange-rect"></div>
+                        <h1>{t('feed')}</h1>
+                    </div>
+                    <h2>{t('sortBy')}</h2>
+
+                    <div className="feed-categories">
+
+                        <TopicFilter onCategoryChange={handleCategoryChange}/>
+
+                    </div>
+                </div>
+
+                <div className="feed-articles">
+                    <Feed/>
+                </div>
+
+
+            </div>
+
+            <div className="feed-to-read">
+
                 <div className="feed-title">
                     <div id="orange-rect"></div>
-                    <h1>{t('feed')}</h1>
+                    <h1>{t('toRead')}</h1>
                 </div>
-                <h2>{t('sortBy')}</h2>
 
-                <div className="feed-categories">
+                <div className="wall-of-article">
 
-                    <TopicFilter onCategoryChange={handleCategoryChange}/>
+                    <div className="flex-container" id="filters">
 
-                </div>
-            </div>
+                        <h2 className="a-title">{t('searchFilters')}</h2>
+                        <h3>{t('topicFilter')}</h3>
 
-            <div className="feed-articles">
-                <Feed/>
-            </div>
+                        <div className="filter-topic">
+                            <TopicFilter onCategoryChange={handleCategoryChange}/>
+                        </div>
 
+                        <h3>{t('levelFilter')}</h3>
+                        <LevelFilter onLevelChange={handleLevelChange}/>
 
-        </div>
-
-        <div className="feed-to-read">
-
-            <div className="feed-title">
-                <div id="orange-rect"></div>
-                <h1>{t('toRead')}</h1>
-            </div>
-
-            <div className="wall-of-article">
-
-                <div className="flex-container" id="filters">
-
-                    <h2 className="a-title">{t('searchFilters')}</h2>
-                    <h3>{t('topicFilter')}</h3>
-
-                    <div className="filter-topic">
-                        <TopicFilter onCategoryChange={handleCategoryChange}/>
                     </div>
 
-                    <h3>{t('levelFilter')}</h3>
-                    <LevelFilter onLevelChange={handleLevelChange}/>
+                    <ArticlesWall selectedCategory={selectedCategory} selectedLevel={selectedLevel}/>
 
                 </div>
 
-                <ArticlesWall selectedCategory={selectedCategory} selectedLevel={selectedLevel}/>
-
             </div>
-
-        </div>
-        <Footer/>
-    </Suspense>
-);
+            <Footer/>
+        </Suspense>
+    );
 }
 
 export default BlogPage;

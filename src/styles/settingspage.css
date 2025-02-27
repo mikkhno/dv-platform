@@ -1,3 +1,38 @@
 .material-symbols-outlined{
-    color: #EC713C;
+/*color: #868686*/
 }
+
+#sections li{
+    list-style: none;
+display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#sections{
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+color: #000000;
+}
+
+#sections .title{
+    font-weight: 700;
+    color: #868686;
+}
+
+#delete-account{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+text-decoration: none;
+color: #FF2A2A;
+
+
+}
+

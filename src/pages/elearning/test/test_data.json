@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "word": "Tisch",
+        "article": "der",
+        "pluralForm": "die Tische",
+        "translation": "Стіл",
+        "examples": "Ich brauche einen neuen Schreibtisch.",
+        "picture": "/image/picture1.png",
+        "audio": "/sounds/word.ogg",
+        "topic": "Möbel"
+    },
+    {
+        "id": 2,
+        "word": "Stuhl",
+        "article": "der",
+        "pluralForm": "die Stühle",
+        "translation": "Стілець",
+        "examples": "Der Stuhl ist sehr bequem.",
+        "picture": "/image/picture2.png",
+        "audio": "/audio/audio2.mp3",
+        "topic": "Möbel"
+    },
+
+        {
+        "id": 3,
+        "word": "Lampe",
+        "article": "die",
+        "pluralForm": "die Lampen",
+        "translation": "Лампа",
+        "examples": "Die Lampe steht auf dem Tisch.",
+        "picture": "/image/picture3.png",
+        "audio": "/audio/audio3.mp3",
+            "topic": "Möbel"
+    },
+    {
+        "id": 4,
+        "word": "Bett",
+        "article": "das",
+        "pluralForm": "die Betten",
+        "translation": "Ліжко",
+        "examples": "Ich habe gestern ein neues Bett gekauft.",
+        "picture": "/image/picture4.png",
+        "audio": "/audio/audio4.mp3",
+        "topic": "Möbel"
+    },
+    {
+        "id": 5,
+        "word": "Schrank",
+        "article": "der",
+        "pluralForm": "die Schränke",
+        "translation": "Шафа",
+        "examples": "Der Schrank hat genug Platz für meine Kleidung.",
+        "picture": "/image/picture5.png",
+        "audio": "/audio/audio5.mp3",
+        "topic": "Möbel"
+    },
+    {
+        "id": 6,
+        "word": "Tasse",
+        "article": "die",
+        "pluralForm": "die Tassen",
+        "translation": "Чашка",
+        "examples": "Die Tasse ist aus Porzellan.",
+        "picture": "/image/picture6.png",
+        "audio": "/audio/audio6.mp3",
+        "topic": "Möbel"
+    },
+    {
+        "id": 7,
+        "word": "Sofa",
+        "article": "das",
+        "pluralForm": "die Sofas",
+        "translation": "Диван",
+        "examples": "Das Sofa ist sehr bequem.",
+        "picture": "/image/picture7.png",
+        "audio": "/audio/audio7.mp3",
+        "topic": "Möbel"
+    },
+    {
+        "id": 8,
+        "word": "Fenster",
+        "article": "das",
+        "pluralForm": "die Fenster",
+        "translation": "Вікно",
+        "examples": "Das Fenster ist offen.",
+        "picture": "/image/picture8.png",
+        "audio": "/audio/audio8.mp3"
+    },
+    {
+        "id": 9,
+        "word": "Teppich",
+        "article": "der",
+        "pluralForm": "die Teppiche",
+        "translation": "Килим",
+        "examples": "Der Teppich ist bunt und weich.",
+        "picture": "/image/picture9.png",
+        "audio": "/audio/audio9.mp3",
+        "topic": "Möbel"
+    },
+    {
+        "id": 10,
+        "word": "Uhr",
+        "article": "die",
+        "pluralForm": "die Uhren",
+        "translation": "Годинник",
+        "examples": "Die Uhr hängt an der Wand.",
+        "picture": "/image/picture10.png",
+        "audio": "/audio/audio10.mp3",
+        "topic": "Möbel"
+    }
+]

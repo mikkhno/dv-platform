@@ -1,4 +1,5 @@
 import './Tag.css';
+import React from "react";
 const beginnerIcon = <span className="material-symbols-outlined">local_florist</span>;
 const intermediateIcon = <span className="material-symbols-outlined">sprint</span>;
 const masterIcon = <span className="material-symbols-outlined">sports_score</span>;
@@ -13,10 +14,10 @@ const Tag = ({ tags, icon, onClick}) => {
 
   return (
       <div className="category" id="pruefung" onClick={onClick}>
-        <div className="icon">
-          {IcoSelect(tags)}
-        </div>
-        <p>{tags}</p>
+          <div className="icon">
+              {IcoSelect(tags)}
+          </div>
+          <p>{tags}</p>
       </div>
   );
 };

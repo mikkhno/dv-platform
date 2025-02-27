@@ -1,4 +1,4 @@
-import article01 from "../image/sa-pict.png";
+import article01 from "../image/ba-pict.png";
 import image01 from "../image/sa-pict.png";
 import image02 from "../image/sa-pict.png";
 import image03 from "../image/sa-pict.png";

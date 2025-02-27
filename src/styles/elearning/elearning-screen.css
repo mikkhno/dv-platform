@@ -1,0 +1,367 @@
+:root{
+    --first: #0B2545;
+    --second:#DCE9F9;
+}
+
+
+.card-learning{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 87.7%;
+    max-width: 1270px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 70px 0;
+}
+
+
+.learning-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.word-count-topic, .mode-exercise h2{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    color: var(--first);
+}
+
+.learning-header{
+    display: flex;
+    flex-direction: column;
+    width: 87.7%;
+}
+
+.progress-bar{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.progress-bar div{
+    width: 33%;
+    height: 12px;
+    /*background: var(--second);*/
+    border-radius: 10px;
+}
+
+.word, .article-drag{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 12px;
+}
+
+.word-result{
+    display: flex;
+    align-items: flex-end;
+}
+
+.word-result {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.word-result.hidden {
+    opacity: 0;
+    pointer-events: none; /* Заборонити взаємодію, коли елемент прихований */
+}
+
+
+.word-translation{
+align-items: center;
+    gap: 8px;
+    display: flex;
+}
+
+.word-game h2, .revealed-card h2,  .word-translation h2{
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 54px;
+color: var(--first);
+}
+
+.word-translation h4{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+margin: 0;
+color: var(--first);
+}
+
+.word-translation h3{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 49px;
+    margin: 0;
+
+color: var(--first);
+
+
+}
+
+.pict-word{
+    width: 60.5%;
+max-width: 670px;
+height: 430px;
+border-radius: 10px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.vektor-example{
+    width: 80px;
+    height: 80px;
+}
+
+.word-picture, .message-bubble, .nav-buttons{
+    display: flex;
+}
+
+.message-bubble{
+    background: var(--second);
+    border-radius: 10px 10px 10px 0;
+    padding: 16px;
+    margin: 0 16px;
+}
+
+#Vektor-name{
+    font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+    color: var(--first);
+}
+
+#message-text{
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+    color: var(--first);
+
+}
+
+.word-picture{
+    display: flex;
+    width: 87.7%;
+    justify-content: space-between;
+}
+
+.nav-buttons{
+    margin-top: 54px;
+    gap: 40px;
+}
+
+.arrow-left, .arrow-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 70px;
+    color: #0B2545;
+    background: var(--second);
+
+}
+
+.arrow-left, .arrow-right, .material-symbols-outlined .pointer{
+    cursor: pointer;
+}
+
+.card-exercise{
+    align-items: center;
+}
+
+.variant-article{
+    gap: 8px;
+    display: flex;
+
+}
+
+.field-article, .variant-article div{
+box-sizing: border-box;
+width: 100px;
+height: 48px;
+
+border: 3px dashed var(--first);
+border-radius: 10px;
+
+}
+
+.field-article{
+    margin-right:12px;
+}
+
+
+
+
+
+.variant-article p, .field-article p{
+    font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 49px;
+text-align: center;
+    margin: 0;
+
+color: var(--first);
+}
+
+
+.variant-article > div {
+    /*display: inline-block;*/
+    /*margin: 0 5px;*/
+    /*padding: 10px;*/
+    /*border: 1px solid #ccc;*/
+    cursor: grab;
+    /*user-select: none;*/
+}
+
+.variant-article > div:active {
+    cursor: grabbing;
+}
+
+.word-result {
+    transform: translateY(-20px); /* Початкове зміщення */
+    animation: fade-in 0.5s ease-out forwards; /* Плавна поява */
+    margin-top: 20px;
+}
+
+
+
+/* Анімація плавного входу */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.buttons{
+    display: flex;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+button:disabled{
+    opacity: 60%;
+}
+
+.check-button{
+
+background: #0B2545;
+border-radius: 10px;border: none;
+
+width: 155px;
+height: 39px;
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+
+color: #fff;
+
+}
+
+.clear-button{
+
+box-sizing: border-box;
+
+width: 155px;
+height: 39px;
+
+border: 2px solid var(--first);
+border-radius: 10px;
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+
+background: #fff;
+color: #0B2545;
+}
+
+.word-translated{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@media screen and (max-width: 869px){
+    .word-translation{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .word-translated{
+        padding: 8px 0;
+    }
+
+    .word-translated h2, .word-translation h2{
+        font-size: 32px;
+    }
+
+    .word-result{
+        align-items: center;
+    }
+
+    #article-instruction{
+        display: none;
+    }
+
+    .message-bubble {
+        padding: 16px;
+    }
+
+    .field-article, .variant-article > div {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* HEARTS */
+.hearts {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.heart {
+  margin: 0 5px;
+}
+
+.heart.empty {
+  opacity: 0.3; /* Неактивні сердечка робимо прозорими */
+}
+
+.word-translation{
+    display: flex;
+    flex-direction: column;
+}

@@ -87,7 +87,8 @@ const Article = () => {
                 </div>
             </div>
 
-            <div className="article-image"></div>
+            {/*<div className="article-image"></div>*/}
+            <img className={"article-image"} src={ArticleData[0].image}/>
             <div className="content-and-menu">
                 <div className="left-side">
                     <div className="article-content">
